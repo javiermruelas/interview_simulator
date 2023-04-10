@@ -4,5 +4,12 @@ import { fileURLToPath } from "url";
 export default defineNuxtConfig({
     alias: {
         '@': fileURLToPath(new URL('./', import.meta.url))
+    },
+    css: ['~/assets/css/main.css'],
+    postcss: {
+        plugins: {
+          tailwindcss: {},
+          autoprefixer: {},
+        },
     }
-})
+});
